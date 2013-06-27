@@ -33,3 +33,9 @@ In your terminal
 #### Get thread number
 
 `4chan_url.thread_id # => 489535242`
+
+## Contributing
+
+#### Reporting issues
+
+Please use the [GitHub issue tracker](https://github.com/serv/fourchan-urler/issues).
