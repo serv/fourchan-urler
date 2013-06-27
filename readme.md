@@ -1,6 +1,6 @@
 # Fourchan-URLer gem
 
-Provide the thread number and board information given 4chan url
+An easy-to-use gem that provides the thread number and the board name given 4chan thread url
 
 ## Installation
 
@@ -25,7 +25,9 @@ In your terminal
 #### Testing the gem out in IRB
 
 `irb`
+
 `require 'rubygems' # => true`
+
 `require 'fourchan-urler' # => true`
 
 You are ready to use Fourchan-URLer gem in IRB
