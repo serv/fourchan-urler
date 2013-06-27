@@ -22,6 +22,14 @@ In your terminal
 
 ## Usage
 
+#### Testing the gem out in IRB
+
+`irb`
+`require 'rubygems' # => true`
+`require 'fourchan-urler' # => true`
+
+You are ready to use Fourchan-URLer gem in IRB
+
 #### Initialize URL request
 
 `4chan_url = FourchanUrler::Request.new('http://boards.4chan.org/b/res/489535242')`
