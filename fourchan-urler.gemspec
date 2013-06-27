@@ -8,5 +8,5 @@ Gem::Specification.new do |s|
   s.email       = 'iamjsonkim@gmail.com'
   s.files       = Dir.glob("lib/**/*")
   s.require_paths = ["lib"]
-  s.homepage    = ''
+  s.homepage    = 'https://github.com/serv/fourchan-urler.git'
 end
