@@ -1,5 +1,7 @@
 # Fourchan-URLer gem
 
+[![Code Climate](https://codeclimate.com/github/serv/fourchan-urler.png)](https://codeclimate.com/github/serv/fourchan-urler)
+
 An easy-to-use gem that provides the thread number and the board name given 4chan thread url
 
 ## Installation
