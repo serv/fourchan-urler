@@ -6,6 +6,13 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    columnize (0.3.6)
+    debugger (1.6.0)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.2.1)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.2.2)
     diff-lcs (1.2.4)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
@@ -20,5 +27,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  debugger
   fourchan-urler!
   rspec

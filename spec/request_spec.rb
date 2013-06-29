@@ -1,14 +1,29 @@
 require 'spec_helper'
-
-describe FourchanUrler::Request, '#initialize' do
-  it 'returns a Request object' do 
-    request = FourchanUrler::Request.new('http://boards.4chan.org/b/res/489537693')
-    request.class.name.should == 'FourchanUrler::Request'
+ 
+describe FourchanUrler::Request do
+  describe 'with a valid url' do
+    let(:thread_id) { 489537693 }
+    let(:board) { "b" }
+    subject { FourchanUrler::Request.new("http://boards.4chan.org/#{board}/res/#{thread_id}") }
+ 
+    its(:thread_id) { should == thread_id }
+    its(:board) { should == board }
+  end
+ 
+  describe 'with an invalid host' do
+    it { expect{FourchanUrler::Request.new("")}.to raise_error(ArgumentError) }
   end
   
-  it 'has right attributes' do 
-    request = FourchanUrler::Request.new('http://boards.4chan.org/b/res/489537693')
-    request.thread_id.should == 489537693
-    request.board.should == 'b'
+  describe 'with an invalid urls' do
+    invalid_urls = [
+      'http://example.com',
+      'http://boards.4chan.org/b/es/489946907',
+      'http://boards.4chan.org/none/es/489946907',
+      'http://boards.4chan.org/b/es/489dfs946907'
+    ]
+    
+    invalid_urls.each do |u|
+      it { expect{FourchanUrler::Request.new(u)}.to raise_error(ArgumentError) }
+    end
   end
 end
