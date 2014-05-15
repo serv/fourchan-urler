@@ -9,6 +9,7 @@ module FourchanUrler
     def initialize(url)
       uri = URI(url)
       if uri.host == "boards.4chan.org" && uri.path.path_check
+
         @thread_id = url[/(\d{3,})/].to_i
         @board = url[/\/[a-z]+\//][/[a-z]+/]
       else
