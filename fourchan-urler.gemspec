@@ -9,4 +9,6 @@ Gem::Specification.new do |s|
   s.files       = Dir.glob("lib/**/*")
   s.require_paths = ["lib"]
   s.homepage    = 'https://github.com/serv/fourchan-urler.git'
+
+  s.add_development_dependency "rspec", "~> 2.14.1"
 end
